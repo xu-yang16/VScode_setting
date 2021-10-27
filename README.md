@@ -1,11 +1,11 @@
 [[_TOC_]]
 
-## 需求
+## Julia和Python需求
 
 * 实现`.jl`和`.py`文件的逐行或逐段运行
 * Interactive plots
 
-## 方法
+## 配置方法
 
 `Vscode`安装扩展`Julia`和`Python`，即可实现如下效果：
 
@@ -74,3 +74,12 @@ plt.legend()
 plt.savefig("python_plot.png")
 ```
 
+
+
+## Vscode remote ssh
+
+首先安装扩展`Remote - SSH`，然后如下图所示，点击`Add New`，输入连接命令，确认后Vscode会自动在config文件中写入连接信息。点击`Connect to Host in New Window`即可连接。
+
+![](.\pic\remote-ssh.png)
+
+![](.\pic\connect.png)
