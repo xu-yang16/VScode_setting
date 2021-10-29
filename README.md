@@ -48,8 +48,11 @@ using Plots, LaTeXStrings
 
 x = 1:10
 y = rand(10, 2)
-plotly()
-plot(x, y, title = "Two Lines", label = ["Line 1" "Line 2"], lw = 3)
+# 不同的backend支持保存不同的图片格式. 比如gr支持保存为png, plotly支持保存为html等
+# 详见https://docs.juliaplots.org/latest/output/#savefig-/-format
+# Credit to 赵晴岳
+gr()
+fig = plot(x, y, title = "Two Lines", label = ["Line 1" "Line 2"], lw = 3)
 xlabel!(L"\sqrt{\frac{a}{b}}")
 ylabel!("My y label")
 
